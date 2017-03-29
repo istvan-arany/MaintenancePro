@@ -1,0 +1,209 @@
+<!--
+    Maintenance Pro Application is prepared in a way, that the questions are randomly chosen
+    from the string resources, and the selectable answers are randomly positioned on the four
+    buttons that appear on the screen.
+
+    The string-arrays are meant to be written so that the first possible answer item has to be the
+    correct one, the last three has to be wrong answers.
+
+    If the number of question-answer set are altered, the parameters inside randomList method that
+    are given to the random integer generator need to be respectively changed.
+ -->
+
+<resources>
+    <string name="app_name" translatable="false">MainPro</string>
+
+    <string name="welcome1" translatable="false">Maintenance Pro Quiz</string>
+    <string name="welcome2">to test the knowledge of\nViking Engineer Trainees</string>
+    <string name="startButton">Start the Test</string>
+    <string name="endButton">Another Test</string>
+    <string name="right_answer">Right Answer!</string>
+    <string name="wrong_answer">Wrong Answer!</string>
+    <string name="next_question">Next Question</string>
+    <string name="get_result">Get Result</string>
+
+    <string-array name="question1">
+        <item>Where do you find the flow monitor of cooling fluid for Converters in the bow?</item>
+        <item>In the converter room bow.</item>
+        <item>In the converter room aft.</item>
+        <item>In the auxiliary engine room bow.</item>
+        <item>In the engine room aft.</item>
+    </string-array>
+
+    <string-array name="question2">
+        <item>Where do you find the flow monitor of cooling fluid for Converters in the aft?</item>
+        <item>In the engine room aft.</item>
+        <item>In the kitchen.</item>
+        <item>In the auxiliary engine room bow.</item>
+        <item>In the engine control room.</item>
+    </string-array>
+
+    <string-array name="question3">
+        <item>Where is the expansion tank of Generator nr.2?</item>
+        <item>In the coolroom in front of the kitchen.</item>
+        <item>In the converter room aft.</item>
+        <item>In the auxiliary engine room bow.</item>
+        <item>In the converter room bow.</item>
+    </string-array>
+
+    <string-array name="question4">
+        <item>How much hydraulic oil does the steering system tank contain?</item>
+        <item>40L</item>
+        <item>20L</item>
+        <item>120L</item>
+        <item>200L</item>
+    </string-array>
+
+    <string-array name="question5">
+        <item>How much oil fills the oil sump from ADD to FULL mark in the C18 engine?</item>
+        <item>3,8L</item>
+        <item>5,8L</item>
+        <item>10L</item>
+        <item>15L</item>
+    </string-array>
+
+    <string-array name="question6">
+        <item>How much oil fills the oil sump from ADD to FULL mark in the C32 engine?</item>
+        <item>28L</item>
+        <item>30L</item>
+        <item>17L</item>
+        <item>10L</item>
+    </string-array>
+
+    <string-array name="question7">
+        <item>How often do you replace the engine oil and filters on the C18/C32 engines?</item>
+        <item>After 500 running hours.</item>
+        <item>After 300 running hours.</item>
+        <item>After 1000 running hours.</item>
+        <item>After 1500 running hours.</item>
+    </string-array>
+
+    <string-array name="question8">
+        <item>How often do you replace engine oil and filters on the C6.6 generator?</item>
+        <item>Annually.</item>
+        <item>Every 4 months.</item>
+        <item>After 100 running hours.</item>
+        <item>Every 2 years.</item>
+    </string-array>
+
+    <string-array name="question9">
+        <item>What day of the month is the deadline for sending the monthly order list?</item>
+        <item>15th day of the month.</item>
+        <item>First monday of the month.</item>
+        <item>Last monday of the month.</item>
+        <item>30th day of the month.</item>
+    </string-array>
+
+    <string-array name="question10">
+        <item>How often do you replace the gear oil in the winches?</item>
+        <item>Every other year.</item>
+        <item>Annually.</item>
+        <item>Once every month.</item>
+        <item>Every other month.</item>
+    </string-array>
+
+    <string-array name="question11">
+        <item>How often do you replace the oil in the compressors?</item>
+        <item>Annually.</item>
+        <item>Twice a year.</item>
+        <item>Every month.</item>
+        <item>4 times a year.</item>
+    </string-array>
+
+    <string-array name="question12">
+        <item>How often do you grease the winches?</item>
+        <item>Every sixth month.</item>
+        <item>Annually.</item>
+        <item>Once every month.</item>
+        <item>Every other month.</item>
+    </string-array>
+
+    <string-array name="question13">
+        <item>How often do you grease the u-shafts?</item>
+        <item>Every 1500 hours.</item>
+        <item>After 3000 hours.</item>
+        <item>Two times a year.</item>
+        <item>Annually.</item>
+    </string-array>
+
+    <string-array name="question14">
+        <item>How often do you grease the cranes?</item>
+        <item>Every third month.</item>
+        <item>Every sixth month.</item>
+        <item>Annually.</item>
+        <item>Twice a year.</item>
+    </string-array>
+
+    <string-array name="question15">
+        <item>How often do you grease the scissor lift of the wheelhouse?</item>
+        <item>Once every three months.</item>
+        <item>Once a year.</item>
+        <item>Twice a year.</item>
+        <item>Every month.</item>
+    </string-array>
+
+    <string-array name="question16">
+        <item>How often do you grease the bearings of the C18 generator sets?</item>
+        <item>After 3500 running hours.</item>
+        <item>After 1000 running hours.</item>
+        <item>After 1500 running hours.</item>
+        <item>After 10000 running hours.</item>
+    </string-array>
+
+    <string-array name="question17">
+        <item>How often do you grease the bearings of the C32 generator sets?</item>
+        <item>After 2100 running hours.</item>
+        <item>After 1000 running hours.</item>
+        <item>After 5000 running hours.</item>
+        <item>After 10000 running hours.</item>
+    </string-array>
+
+    <string-array name="question18">
+        <item>How often do you grease the bearings of the electrical drives in the bow?</item>
+        <item>After 5600 running hours.</item>
+        <item>After 10000 running hours.</item>
+        <item>After 2000 running hours.</item>
+        <item>After 1500 running hours.</item>
+    </string-array>
+
+    <string-array name="question19">
+        <item>How often do you grease the bearings of the electrical drives in the aft?</item>
+        <item>After 3150 running hours.</item>
+        <item>After 5000 running hours.</item>
+        <item>After 5600 running hours.</item>
+        <item>After 8000 running hours.</item>
+    </string-array>
+
+    <string-array name="question20">
+        <item>How often do you grease the bearings of the sewage plant\'s water pumps?</item>
+        <item>Once every third month.</item>
+        <item>Annually.</item>
+        <item>Every other month.</item>
+        <item>Twice a year.</item>
+    </string-array>
+
+    <string-array name="question21">
+        <item>How often do you grease the seawater-pumps of the air conditioning plant?</item>
+        <item>Every third month.</item>
+        <item>Twice a year.</item>
+        <item>Annually.</item>
+        <item>Six times a year.</item>
+    </string-array>
+
+    <string-array name="question22">
+        <item>How often do you grease the coolant circulation pumps of the air conditioning plant?</item>
+        <item>Every fourth month.</item>
+        <item>Twice a year.</item>
+        <item>Once a year.</item>
+        <item>Every second month.</item>
+    </string-array>
+
+    <string-array name="question23">
+        <item>How often do you rinse the tanks of the sewage plant?</item>
+        <item>Once every week.</item>
+        <item>Once a month.</item>
+        <item>Every second month.</item>
+        <item>4 times a year.</item>
+    </string-array>
+
+</resources>
